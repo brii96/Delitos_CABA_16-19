@@ -6,10 +6,14 @@
     /* box-sizing: border-box; */
 }
 
+strong{
+    list-style: none;
+}
+
 body{
     /* background-color: #236be7; */
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-    /* font-size: 16px; */
+    font-size: 16px;
 }
 
 hr{
