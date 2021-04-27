@@ -11,16 +11,30 @@ strong{
 }
 
 body{
-    /* background-color: #236be7; */
+    /* background-color: #7f8899; */
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
+    background-image: url("https://raw.githubusercontent.com/brii96/Delitos_CABA_16-19/main/Fondo.jpg");
 }
 
 hr{
     background-color: #F2C94C ;
 }
 
+p, h1, h2, h3, li{
+    color: cornsilk;
+}
 
-.tittle{
+a{
+    color: crimson;
+}
+
+.titulo{
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.informe-introduccion{
+    background-image: url("https://raw.githubusercontent.com/brii96/Delitos_CABA_16-19/main/Header-Fondo.png");
 }
