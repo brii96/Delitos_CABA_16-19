@@ -1,0 +1,22 @@
+*{
+    margin: 10px;
+    padding: 0;
+    /* text-decoration: none;
+    list-style: none; */
+    /* box-sizing: border-box; */
+}
+
+body{
+    /* background-color: #236be7; */
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    /* font-size: 16px; */
+}
+
+hr{
+    background-color: #F2C94C ;
+}
+
+
+.tittle{
+    text-align: center;
+}

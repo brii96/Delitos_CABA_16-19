@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Delitos CABA</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1 class="tittle">Delitos en CABA</h1>
+    <p>El siguiente informe contiene información sobre datos de delitos ocurridos en la Ciudad de Buenos Aires (CABA) 
+        en un periodo comprendido entre 2016 y 2019. Los mismo datos son extraídos desde la página de datos abiertos
+        <a href="https://data.buenosaires.gob.ar/dataset/delitos" target="_blank">https://data.buenosaires.gob.ar/dataset/delitos</a>  
+    </p>
+
+    <p>
+       Antes de realizar visualización y posterior muestrario de “información”, tenemos que realizar dos tareas que ocupan gran porcentaje del tiempo que conlleva hacer un proyecto:
+       <strong>¿Qué datos tenemos?, ¿Qué queremos? o ¿Qué buscamos entender y comprender?</strong>
+       Estas, son algunas de las preguntas que todo analista de datos debe realizarse antes de comenzar a trabajar con alguna tecnología y empezar a desarrollar el proyecto.
+       En nuestro caso tenemos datasets orientados a Delitos transcurridos entre 2016 y 2019 comprendidos en CABA
+    </p>
+
+    <p>
+        <strong>¿Qué datos tenemos?</strong>
+        Si realizamos una exploración inicial de los datos, consultando la documentación y diccionario de datos extraídos de la página de origen de los datos, 
+        nos encontramos con Campos Nulos; Campos con un formato de fecha distinto de una misma columna 
+        (ejemplo: 13/03/19 vs 13-03-19); Columna de ‘Franja Horaria’ en formato entero. 
+    </p>
+
+    <p>
+        Por otra parte, tenemos que preguntarnos qué consultas buscamos responder con visualizaciones. 
+        Un tercer detalle y no menos importante es lo que nos permite el análisis de datos, y es el descubrimiento
+        de la información, esto significa que si bien, a priori, responderemos las consultas que nos conciernen, 
+        también nos podemos encontrar con extraer información nueva que no se persiguió inicialmente.
+    </p>
+
+    <p>
+        <strong>¿Qué queremos? o ¿Qué buscamos entender y comprender?</strong>
+        <ul>
+            <li>Cantidad de delitos por barrio</li>
+            <li>Cantidades de tipos de robos</li>
+            <li>Días, Meses, y Años en donde más se concentran los robos</li>
+            <li>Realizar series de tiempo para hacer un contraste entre los años</li>
+        </ul>
+    </p>
+    <hr>
+
+    <!-- Dashboard Delitos General -->
+    <h3>Dashboard General sobre Tipos, totales, y concentración, en periodos de tiempo, de Delitos</h3>
+    <p>
+        El siguiente tablero me permite obtener información sobre <strong>las cantidades de robos y tipos de robos por barrio</strong>;
+        <strong>Totales de tipos de robos en una jerarquia de tiempo anual, mensual y diario;</strong> Asimismo, <strong>no solo se tiene un panel 
+        de filtros, sino que cada gráfico en si mismo en un filtro: En el caso del mapa, si hacemos click en un barrio 
+        filtrará las visualizaciones de tipos de robos incluyendo una comparativa con los barrios cercanos, y por el lado 
+        de la visualización de concentración de robos (días), filtrará la cantidad de robos por cada dia de la semana.</strong>
+    </p>
+
+    <div class='tableauPlaceholder' id='viz1619533260784' style='position: relative'><noscript><a href='#'>
+        <img alt='Dashboard General' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;DashboardGeneral&#47;1_rss.png' 
+        style='border: none' /></a></noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+            <param name='name' value='Delitos_16-19&#47;DashboardGeneral' />
+            <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;DashboardGeneral&#47;1.png' /> 
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' /><param name='language' value='es' />
+        </object>
+    </div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1619533260784');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1200px';vizElement.style.height='827px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1200px';vizElement.style.height='827px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='1327px';}
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+    <!--  -->
+    <hr>
+
+    <!-- Dashboard Delitos con Violencia -->
+    <h3>Delitos con Violencia</h3>
+    <p>
+        El siguiente tablero me permite obtener información sobre <strong>cantidades del tipo de delito 
+        en los barrios de CABA, en un periodo anual y mensual </strong>. Además me permite conocer el comportamiento 
+        del hecho delictivo a través de una comparacion anual.
+    </p>
+    <div class='tableauPlaceholder' id='viz1619538739270' style='position: relative'>
+        <noscript><a href='#'><img alt='Dash robo con violencia ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;Dashroboconviolencia&#47;1_rss.png' 
+            style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+            <param name='name' value='Delitos_16-19&#47;Dashroboconviolencia' /><param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;Dashroboconviolencia&#47;1.png' /> 
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='es' />
+        </object>
+    </div>                
+        <script type='text/javascript'>var divElement = document.getElementById('viz1619538739270');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='777px';}
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    <!--  -->
+    <hr>
+
+    <!--Dashboard Delitos sin Violencia -->
+    <h3>Delitos sin Violencia</h3>
+    <p>
+        El siguiente tablero me permite obtener información sobre <strong>cantidades del tipo de delito 
+        en los barrios de CABA, en un periodo anual y mensual </strong>. Además me permite conocer el comportamiento 
+        del hecho delictivo a través de una comparacion anual.
+    </p>
+    <div class='tableauPlaceholder' id='viz1619538943341' style='position: relative'>
+        <noscript><a href='#'><img alt='Dash Hurto sin Violencia ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;DashHurtosinViolencia&#47;1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+            <param name='name' value='Delitos_16-19&#47;DashHurtosinViolencia' />
+            <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;DashHurtosinViolencia&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='es' />
+        </object>
+    </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1619538943341');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+            else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+            else { vizElement.style.width='100%';vizElement.style.height='777px';}
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';             
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    <!--  -->
+    <hr>
+
+    <!--Dashboard Delitos con Homicidios -->
+    <h3>Delitos con Homicidios</h3>
+    <p>
+        El siguiente tablero me permite obtener información sobre <strong>cantidades del tipo de delito 
+        en los barrios de CABA, en un periodo anual y mensual </strong>. Además me permite conocer el comportamiento 
+        del hecho delictivo a través de una comparacion anual.
+    </p>
+    <div class='tableauPlaceholder' id='viz1619539176165' style='position: relative'>
+        <noscript><a href='#'><img alt='Dash Homicidios ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;DashHomicidios&#47;1_rss.png' style='border: none' /></a></noscript>
+        <object class='tableauViz'  style='display:none;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+            <param name='name' value='Delitos_16-19&#47;DashHomicidios' />
+            <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;De&#47;Delitos_16-19&#47;DashHomicidios&#47;1.png' /> 
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='es' />
+        </object>
+    </div>                
+    <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1619539176165');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                   
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1000px';vizElement.style.height='827px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='777px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
+    <!--  -->
+
+</body>
+</html>
